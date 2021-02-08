@@ -24,11 +24,20 @@ for n in range(2,1000000):
 
 most = (953, 21)
 
-for n in range(len(primes)-1):
+index = 0
+total = 0
+
+while total < 1000000:
+    total += primes[index]
+    index += 1
+
+for n in range(index):
+    if index-n < most[1]:
+        break
     print("starting")
     total = primes[n]
     count = 1
-    for x in range(n+1,len(primes)):
+    for x in range(n+1,index):
         print(total, count)
         if total in primes and count > most[1]:
             most = (total, count)
