@@ -15,5 +15,4 @@ while fib < 4000000:
     fib += last
     last = current
     current = fib
-print(total
-)
+print(total)
