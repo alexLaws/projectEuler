@@ -42,9 +42,12 @@ for n in range(1,28124):
 
 prelim = []
 
+timeA = time.perf_counter()
 for n in range(len(abundants)):
     for x in range(n,len(abundants)):
         prelim.append(abundants[n]+abundants[x])
+
+timeB = time.perf_counter()
 
 sums = set(prelim)
 
@@ -56,3 +59,4 @@ print(total)
 
 toc = time.perf_counter()
 print(f"Ran in {toc - tic:0.4f} seconds")
+print(f"Ran in {timeB - timeA:0.4f} seconds")
