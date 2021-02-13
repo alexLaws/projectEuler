@@ -30,4 +30,4 @@ while len(str(current)) < 1000:
     current = fib
     index += 1
 
-print(index)    
+print(index)
