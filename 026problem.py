@@ -15,12 +15,15 @@
 
 longest = 0
 
-for x in range(1,1000):
+for x in range(1,50):
     test = str(1/x)[2:]
     for n in range(int(len(test)/2)):
         if test[:n] == test[n:2*n]:
+            print(test)
             if n > longest:
                 print(test[:n])
                 print(test[n:2*n])
                 print(x)
                 longest = x
+            else:
+                break

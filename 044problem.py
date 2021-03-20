@@ -11,9 +11,11 @@ plist = []
 def pentagonal(number):
     return int((number * (3 * number - 1))/2)
 
-p = 0
+for n in range(1,20000):
+    plist.append(pentagonal(n))
 
-while True:
-    p += 1
-    plist.append(pentagonal(p))
-
+for n in range(len(plist)-1):
+    for x in range(n+1,len(plist)):
+        if (plist[n] + plist[x] in plist):
+            if (plist[x] - plist[n] in plist):
+                print(n,x)
