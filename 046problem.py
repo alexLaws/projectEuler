@@ -34,9 +34,7 @@ while True:
     if n > 33 and n % 2 == 1 and isprime(n) == False:
         for prime in primes:
             if (n - prime) in doubleSquares:
-                pass
-            else:
-                output = n
+                break
     if output:
         break
     n += 1
